@@ -1,0 +1,39 @@
+#welcomeText h1 {
+    font-family: Arial;
+    font-size: 48px;
+}
+
+#welcomeText h3 {
+    font-family: Consolas;
+    color: rgb(90,90,90);
+}
+
+#welcomeText {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-left-color: black;
+    border-left-style: solid;
+    padding-left: 40px;
+    margin-left: 30px;
+}
+
+#welcomeText h1 {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+
+canvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+
+.lavender {
+    color: rgb(116, 94, 191);
+}
