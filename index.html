@@ -14,6 +14,11 @@
                 <h1>I'm <strong class="lavender">Keon</strong>,</h1>
                 <h3>computer science student at asu</h3>
             </div>
+
+            <div class="projectEntry" v-for="">
+
+            </div>
+
         </div>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -63,7 +68,7 @@
                     this.vel = this.vel.add(this.force);
 
                     // limit velocity
-                    var maxVel = 0.01;
+                    var maxVel = 0.005;
                     if (this.vel.x > maxVel) {
                         this.vel.x = maxVel;
                     } else if (this.vel.x < -maxVel) {
@@ -121,7 +126,7 @@
 
             
 
-            const light = new THREE.PointLight( 0xffffff, 10, 100 );
+            const light = new THREE.PointLight( 0x8777bf, 10, 100 );
             light.position.set( 50, 50, 50 );
             scene.add( light );
             
