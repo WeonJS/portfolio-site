@@ -8,8 +8,9 @@ body {
 }
 
 #welcomeText h3 {
-    font-family: Consolas;
+    font-family: 'Courier New', Courier, monospace;
     color: white;
+    font-weight: 800;
 }
 
 #welcomeText {
