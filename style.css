@@ -74,7 +74,7 @@ canvas {
     position: fixed;
     top: 32px;
     left: 32px;
-    font-family: Consolas;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     font-weight: 800;
 }
