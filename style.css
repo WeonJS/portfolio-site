@@ -1,3 +1,7 @@
+body {
+    margin-top: 20vw;
+}
+
 #welcomeText h1 {
     font-family: Arial;
     font-size: 48px;
@@ -5,12 +9,12 @@
 
 #welcomeText h3 {
     font-family: Consolas;
-    color: rgb(90,90,90);
+    color: white;
 }
 
 #welcomeText {
     margin: 0;
-    position: absolute;
+    
     top: 40%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -27,13 +31,53 @@
 }
 
 canvas {
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     z-index: -1;
 }
 
 
-.lavender {
-    color: rgb(116, 94, 191);
+.highlight {
+    color: #990033;
+    /*color: rgb(116, 94, 191);*/
+}
+
+
+#projectList li {
+    background-color: rgba(90, 0, 31,0.8);
+    border-radius: 25px;
+    padding: 20px;
+    list-style-type: none;
+}
+
+#projectList h2 {
+    color: white;
+    font-family: Arial;
+    border-left-style: solid;
+    padding-left: 20px;
+}
+
+#projectList p {
+    color: white;
+    font-family: Consolas;
+    font-size: 18px;
+}
+
+#projectList {
+    padding-left: 0px;
+}
+
+#socials {
+    position: fixed;
+    top: 32px;
+    left: 32px;
+    font-family: Consolas;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#socials img {
+    vertical-align: middle;
+    padding-bottom: 10px;
 }

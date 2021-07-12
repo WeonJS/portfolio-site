@@ -9,15 +9,24 @@
     <body>
 
         <div id="app">
-
+            <div id="socials">
+                github
+                <a href="https://github.com/WeonJS"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" width="32" height="32"></a>
+            </div>
+            
             <div id="welcomeText">
-                <h1>I'm <strong class="lavender">Keon</strong>,</h1>
+                <h1>I'm <strong class="highlight">Keon</strong>,</h1>
                 <h3>computer science student at asu</h3>
             </div>
 
-            <div class="projectEntry" v-for="">
+            <ul id="projectList">
+                <li v-for="p in projects">
+                    <h2>{{ p.title }}</h2>
+                    <img v-bind:src="p.imgLink"/>
+                    <p>{{ p.desc }}</p>
+                </li>
+            </ul>
 
-            </div>
 
         </div>
         
@@ -28,7 +37,9 @@
             var planets = [];
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-            const G = 0.000000067;
+            const G = 67;
+            var xbound = 15;
+            var ybound = 10;
 
             class Planet {
                 constructor(mass) { // color as hex
@@ -39,12 +50,12 @@
                     this.r = 0;
                     
 
-                    this.geometry = new THREE.SphereGeometry( this.mass, 32, 6 );
+                    this.geometry = new THREE.BoxGeometry( this.mass, this.mass, this.mass);
                     this.material = new THREE.MeshLambertMaterial( {color: 0xffffff} );
                     this.sphere = new THREE.Mesh( this.geometry, this.material );
                     camera.position.z = 10;
-                    this.sphere.position.x = Math.random() * 10 - Math.random() * 10;
-                    this.sphere.position.y = Math.random() * 5 - Math.random() * 5;
+                    this.sphere.position.x = Math.random() * xbound - Math.random() * xbound;
+                    this.sphere.position.y = Math.random() * ybound - Math.random() * ybound;
                     scene.add( this.sphere );
                     planets.push(this);
                 }
@@ -81,12 +92,12 @@
                         this.vel.y = -maxVel;
                     }
                     
-                    this.sphere.position.x += this.vel.x + (Math.random() - Math.random()) /  70;
-                    this.sphere.position.y += this.vel.y + (Math.random() - Math.random()) / 70;
+                    //jiggle  + (Math.random() - Math.random()) /  70;
+                    this.sphere.position.x += this.vel.x;
+                    this.sphere.position.y += this.vel.y;
 
                     // spheres wont leave bounds
-                    var xbound = 15;
-                    var ybound = 10;
+                    
                     if (this.sphere.position.x > xbound) {
                         this.sphere.position.x = -xbound;
                     } else if (this.sphere.position.x < -xbound) {
@@ -114,7 +125,7 @@
                 }
             }
 
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i < 50; i++) {
                 new Planet(Math.random()+0.2);
             }
             
@@ -122,13 +133,22 @@
             renderer.setSize( window.innerWidth, window.innerHeight );
             document.body.appendChild( renderer.domElement );
             
-            renderer.setClearColor( 0xffffff, 1 );
+            renderer.setClearColor( 0xffb310, 1 );
 
             
 
-            const light = new THREE.PointLight( 0x8777bf, 10, 100 );
+            const light = new THREE.PointLight( 0x990033, 10, 100 );
             light.position.set( 50, 50, 50 );
             scene.add( light );
+
+            const material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
+            const points = [];
+            points.push( new THREE.Vector3( - 10, 0, 0 ) );
+            points.push( new THREE.Vector3( 0, 10, 0 ) );
+            points.push( new THREE.Vector3( 10, 0, 0 ) );
+
+            const geometry = new THREE.BufferGeometry().setFromPoints( points );
+
             
 
             function animate() {
