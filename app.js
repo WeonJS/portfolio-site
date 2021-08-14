@@ -22,4 +22,46 @@ const app = Vue.createApp({
     }
 });
 
+app.component('glitchtext', {
+    props: ['txt', 'freq', 'colorglitch', 'textglitch', 'positionglitch', 'typeout', 'typeoutspeed', 'delay'],
+    template: `<p></p>`,
+    data() {
+        return {
+            typed: false
+        }
+    },
+    mounted() {
+        if (this.txt !== null) {
+            setTimeout(() => {
+                if (this.typeout === 'true') {
+                    this.typeOut();
+                }
+            }, this.delay);
+            
+        } else {
+            // do nothing lul because no text to glitch
+        }
+        
+    },
+    methods: {
+        addLetter(l) {
+            this.$el.innerHTML += l;
+        },
+        typeOut() {
+            var c = this.txt.split("");
+            var i = 0;
+            var typeoutInterval = setInterval(() => {
+                this.addLetter(c[i]);
+                if (this.$el.innerHTML.length === c.length) {
+                    clearInterval(typeoutInterval);
+                    this.typed = true;
+                    
+                }
+                i++;
+                
+            }, 500 / this.typeoutspeed);
+        }
+    }
+})
+
 app.mount("#app");

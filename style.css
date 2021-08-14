@@ -1,34 +1,49 @@
 body {
-    margin-top: 20vw;
+    margin-top: 300px;
 }
 
-#welcomeText h1 {
-    font-family: Arial;
-    font-size: 48px;
+#welcomeText p {
+    color: black;
+    margin: 0px;
+    font-size: 16px;
+    letter-spacing: 2px;
 }
 
-#welcomeText h3 {
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    font-weight: 800;
+@font-face {
+    font-family: arcadeClassic;
+    src: url(ARCADECLASSIC.TTF);
 }
 
 #welcomeText {
     margin: 0;
+    font-family: arcadeClassic;
     
-    top: 40%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     border-left-color: black;
     border-left-style: solid;
     padding-left: 40px;
     margin-left: 30px;
+    height: 100px;
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle
 }
 
-#welcomeText h1 {
+
+    /* font-size: 48px;
     margin: 0px;
     padding: 0px;
-    color: black;
+    letter-spacing: 5px;
+    color: black; */
+
+
+#welcomeText #header {
+    font-size: 48px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 5px;
+    color: black; 
 }
 
 canvas {
@@ -39,29 +54,30 @@ canvas {
 }
 
 
-.highlight {
-    color: #990033;
-    /*color: rgb(116, 94, 191);*/
-}
-
 
 #projectList li {
-    background-color: rgba(90, 0, 31,0.8);
-    border-radius: 25px;
+    background-color: white;
+    /* border-radius: 25px; */
     padding: 20px;
     list-style-type: none;
     margin-bottom: 10px;
+    border-style: solid;
+}
+
+#projectList img {
+    border-style: solid;
+    border-width: 2px;
 }
 
 #projectList h2 {
-    color: white;
+    color: black;
     font-family: Arial;
     border-left-style: solid;
     padding-left: 20px;
 }
 
 #projectList p {
-    color: white;
+    color: black;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     font-weight: 1000;
@@ -84,4 +100,6 @@ canvas {
 #socials img {
     vertical-align: middle;
     padding-bottom: 10px;
+    width: 24px;
+    height: 24px;
 }
