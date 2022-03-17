@@ -1,0 +1,11 @@
+website ideas:
+
+- monochrome, gloomy, subtle lighting
+- art gallery
+- when you first open the site, there will be doors and a minimalist portrait of me and the name "keon davoudi" will type out below it with typing sounds and then after that "computer science student at arizona state university" in smaller grey text below it.
+- then there will be 3 buttons below: about - projects - contact
+- clicking about will fade in a screen that brings my about page of me
+- clicking projects will fade away the intro screen and the doors will open, camera moves down a hallway until it meets a perpendicular hallway with all the picture frames on the opposing hallway. arrows will be on the left and right of the screen to move within the hallway and each picture frame will include a thumbnail of the project, and when the camera is in front of a certain picture frame the title of the project will appear in big white letters with cool font below the frame.
+- when you click on a frame, the project page will show up where i basically show the project in the first part and blog about it and its development in the rest of the page.
+- user can then close the page and continue exploring other projects.
+- user can also go back outside with an arrow pointing down at the bottom of the screen and camera will zoom out of the building and will show the intro page again.
