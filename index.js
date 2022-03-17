@@ -6,4 +6,4 @@ class IntroScreen extends React.Component {
     }
 }
 
-ReactDOM.render(<IntroScreen />, document.getElementsById("root"));
+ReactDOM.render(<IntroScreen />, document.getElementById("root"));
