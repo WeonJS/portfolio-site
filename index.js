@@ -1,22 +1,43 @@
 class IntroScreen extends React.Component {
     render() {
         return (
-            <h1>Keon's Website</h1>
+            <Canvas></Canvas>
+            
         );
+    }
+}
+
+class Particle {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.radVal = 0;
+        this.radInc = 0.05;
+    }
+
+    update() {
+        y--;
+        this.radVal += this.radInc;
+    }
+
+    getSinVal() {
+        return Math.sin(this.radVal);
     }
 }
 
 class Canvas extends React.Component {
     constructor(props) {
         super(props);
-        setInterval(() => {
-            
-        }, 60);
+        this.props.canvas = <canvas></canvas>
+        
     }
 
-    createCanvas() {
-        var canvas = <canvas id="canvas"></canvas>     
+    render() {
+        return (
+            this.props.canvas
+        );
     }
+
 }
 
 
