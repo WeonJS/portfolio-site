@@ -29,7 +29,8 @@ class Canvas extends React.Component {
     constructor(props) {
         super(props);
         this.props.canvas = <canvas></canvas>
-        
+        this.props.ctx = this.props.canvas.getContext('2d');
+        ctx.fillRect(0, 0, 50, 50);
     }
 
     render() {
