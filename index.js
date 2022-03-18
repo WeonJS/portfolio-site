@@ -30,6 +30,7 @@ class Canvas extends React.Component {
     componentDidMount() {
         const canvas = this.refs.canvas;
         const ctx = canvas.getContext('2d');
+        ctx.fillStyle = "#333333";
         ctx.fillRect(0,0,canvas.width,canvas.height);
     }
 
