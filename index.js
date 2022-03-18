@@ -37,8 +37,6 @@ class Canvas extends React.Component {
     render() {
 
         const canvasStyling = {
-            padding: "0px",
-            margin: "0px",
             width: "100vw",
             height: "100vh"
         };
