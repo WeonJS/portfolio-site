@@ -35,7 +35,7 @@ class Canvas extends React.Component {
 
     render() {
         return (
-            <canvas ref="canvas" />
+            <canvas ref="canvas" style="width:100vw;"/>
         );
     }
 
