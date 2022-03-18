@@ -26,16 +26,15 @@ class Particle {
 }
 
 class Canvas extends React.Component {
-    constructor(props) {
-        super(props);
-        this.props.canvas = <canvas></canvas>
-        this.props.ctx = this.props.canvas.getContext('2d');
-        ctx.fillRect(0, 0, 50, 50);
+    
+    componentDidMount() {
+        const canvas = this.refs.canvas;
+        const ctx = canvas.getContext('2d');
     }
 
     render() {
         return (
-            this.props.canvas
+            <canvas ref="canvas" />
         );
     }
 
