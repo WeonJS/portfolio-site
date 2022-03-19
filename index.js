@@ -92,7 +92,7 @@ class Canvas extends React.Component {
                     var partIndex = this.particles.indexOf(particles[i]);
                     this.particles.splice(partIndex, 1);
                 }
-                particles[i].update();
+                this.particles[i].update();
             }
             console.log(this.particles);
             updates++;
