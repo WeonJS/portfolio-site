@@ -74,16 +74,15 @@ class Canvas extends React.Component {
     componentDidMount() {
         const canvas = this.refs.canvas;
         const ctx = canvas.getContext('2d');
-        ctx.fillStyle = "#333333";
-        ctx.fillRect(0,0,canvas.width,canvas.height);
         ctx.font = "3px Courier New";
-        ctx.fillStyle = "white";
 
         var updates = 0;
         var updatesTilNextSpawn = Math.floor(Math.random() * 10);
 
         setInterval(() => {
+            ctx.fillStyle = "#333333";
             ctx.fillRect(0,0,canvas.width,canvas.height);
+            
             if (updates % updatesTilNextSpawn == 0) {
                 this.particles.push(new Particle(Math.random() * canvas.width, canvas.height));
             }
@@ -93,6 +92,7 @@ class Canvas extends React.Component {
                     var partIndex = this.particles.indexOf(particles[i]);
                     this.particles.splice(partIndex, 1);
                 }
+                ctx.fillStyle = "white";
                 this.particles[i].update(ctx);
             }
             console.log(this.particles);
