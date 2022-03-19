@@ -56,7 +56,7 @@ class Particle {
     }
 
     recalculateUpdatesTilNextChange() {
-        this.updatesTilNextChange = Math.floor(Math.random() * 30);
+        this.updatesTilNextChange = 20 + Math.floor(Math.random() * 30);
     }
 
     getSinVal() {
