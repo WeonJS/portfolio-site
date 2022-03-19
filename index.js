@@ -131,12 +131,15 @@ class IntroInfo extends React.Component {
             position: "absolute;",
             left: "50%;",
             top: "50%;",
-            transform: "translate(-50%, -50%);"
+            "text-align": "center"
 
         }
 
         return (
-            <img src="keon.png" ref="infoBox" style={infoStyling} />
+            <div id="info">
+                <img src="keon.png" ref="infoBox" style={infoStyling} />
+                <h2>Keon Davoudi</h2>
+            </div>
         );
     }
 }
