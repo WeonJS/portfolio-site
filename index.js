@@ -97,7 +97,7 @@ class Canvas extends React.Component {
                     var partIndex = this.particles.indexOf(this.particles[i]);
                     this.particles.splice(partIndex, 1);
                 }
-                ctx.fillStyle = "white";
+                ctx.fillStyle = "#666666";
                 this.particles[i].update(ctx);
             }
             console.log(this.particles);
