@@ -130,7 +130,6 @@ class IntroInfo extends React.Component {
             "position": "absolute;",
             "left": "50%;",
             "top": "50%;",
-            "font-family": "Courier New"
         }
 
         return (
