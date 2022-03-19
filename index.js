@@ -29,7 +29,7 @@ class Particle {
         this.recalculateUpdatesTilNextChange(); // calculates above
         
 
-        this.yvel = -1;
+        this.yvel = -Math.random() * 4;
         this.radVal = Math.random() * Math.PI; // offset initial val to avoid similar paths
         this.radInc = 0.05;
         this.sinAmp = 20; // how many pixels it oscillates over
@@ -44,6 +44,7 @@ class Particle {
         this.y += this.yvel;
         this.displayXPos = this.x + this.getSinVal();
 
+        ctx.font = ""+ (12 + Math.ceil(Math.random() * 4))+"px Courier New";
         ctx.fillText(this.text, this.displayXPos, this.y);
 
         this.radVal += this.radInc;
@@ -77,7 +78,7 @@ class Canvas extends React.Component {
         canvas.height = window.innerHeight;
 
         const ctx = canvas.getContext('2d');
-        ctx.font = "8px Courier New";
+        ctx.font = "12px Courier New";
 
         var updates = 0;
         var updatesTilNextSpawn = Math.floor(Math.random() * 10);
