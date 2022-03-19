@@ -30,7 +30,7 @@ class Particle {
         
 
         this.yvel = -1;
-        this.radVal = 0;
+        this.radVal = Math.random() * Math.PI; // offset initial val to avoid similar paths
         this.radInc = 0.05;
         this.sinAmp = 20; // how many pixels it oscillates over
     }
