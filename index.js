@@ -41,7 +41,7 @@ class Particle {
             this.recalculateUpdatesTilNextChange();
         }
 
-        y += this.yvel;
+        this.y += this.yvel;
         this.displayXPos = this.x + this.getSinVal();
 
         ctx.fillText(this.text, this.displayXPos, this.y);
