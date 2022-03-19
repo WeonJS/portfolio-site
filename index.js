@@ -1,7 +1,9 @@
-class IntroScreen extends React.Component {
+class Website extends React.Component {
     render() {
         return (
-            <Canvas></Canvas>
+            <Canvas>
+                <IntroInfo></IntroInfo>
+            </Canvas>
             
         );
     }
@@ -109,7 +111,8 @@ class Canvas extends React.Component {
 
         const canvasStyling = {
             width: "100%",
-            height: "100vh"
+            height: "100vh",
+            "z-index": 1
         };
 
         return (
@@ -119,5 +122,19 @@ class Canvas extends React.Component {
 
 }
 
+class IntroInfo extends React.Component {
+    render() {
+        const infoStyling = {
+            "z-index": 2
+        }
 
-ReactDOM.render(<IntroScreen />, document.getElementById("root"));
+        return (
+            <div ref="infoBox" style={infoStyling}>
+                <img src="keon.png" />
+            </div>
+        );
+    }
+}
+
+
+ReactDOM.render(<Website />, document.getElementById("root"));
