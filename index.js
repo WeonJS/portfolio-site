@@ -72,7 +72,9 @@ class Canvas extends React.Component {
     particles = [];
     
     componentDidMount() {
-        const canvas = this.refs.canvas;
+        var canvas = this.refs.canvas;
+        canvas.width = 50;
+
         const ctx = canvas.getContext('2d');
         ctx.font = "8px Courier New";
 
