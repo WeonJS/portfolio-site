@@ -35,7 +35,7 @@ class Particle {
         this.sinAmp = 20; // how many pixels it oscillates over
     }
 
-    update() {
+    update(ctx) {
         if (this.udpatesPassed % this.updatesTilNextChange == 0) {
             this.text = this.getRandomText();
             this.recalculateUpdatesTilNextChange();
@@ -92,7 +92,7 @@ class Canvas extends React.Component {
                     var partIndex = this.particles.indexOf(particles[i]);
                     this.particles.splice(partIndex, 1);
                 }
-                this.particles[i].update();
+                this.particles[i].update(ctx);
             }
             console.log(this.particles);
             updates++;
