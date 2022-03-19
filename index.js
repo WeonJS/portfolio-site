@@ -26,6 +26,8 @@ class Particle {
 }
 
 class Canvas extends React.Component {
+
+    particles = [];
     
     componentDidMount() {
         const canvas = this.refs.canvas;
@@ -37,8 +39,8 @@ class Canvas extends React.Component {
     render() {
 
         const canvasStyling = {
-            width: "100vw",
-            height: "100vh"
+            width: "100%",
+            height: "100%"
         };
 
         return (
