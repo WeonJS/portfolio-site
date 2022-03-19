@@ -92,6 +92,7 @@ class Canvas extends React.Component {
                     this.particles.splice(partIndex, 1);
                 }
             }
+            console.log(this.particles);
             updates++;
         }, 60);
     }
