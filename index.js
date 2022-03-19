@@ -131,7 +131,7 @@ class IntroInfo extends React.Component {
         }
 
         return (
-            <img ref="infoBox" style={infoStyling} />
+            <img src="keon.png" ref="infoBox" style={infoStyling} />
         );
     }
 }
