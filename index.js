@@ -1,9 +1,10 @@
 class Website extends React.Component {
     render() {
         return (
-            <Canvas>
+            <div id="root">
+                <Canvas></Canvas>
                 <IntroInfo></IntroInfo>
-            </Canvas>
+            </div>
             
         );
     }
