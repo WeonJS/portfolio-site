@@ -127,18 +127,16 @@ class Canvas extends React.Component {
 class IntroInfo extends React.Component {
     render() {
         const infoStyling = {
-            "z-index": "2;",
             position: "absolute;",
             left: "50%;",
             top: "50%;",
-            "text-align": "center"
-
+            "font-family": "Courier New"
         }
 
         return (
             <div id="info" style={infoStyling}>
                 <img src="keon.png" ref="infoBox" />
-                <h2>Keon Davoudi</h2>
+                <h1>Keon Davoudi</h1>
             </div>
         );
     }
