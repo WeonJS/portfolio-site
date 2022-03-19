@@ -77,6 +77,7 @@ class Canvas extends React.Component {
         ctx.fillStyle = "#333333";
         ctx.fillRect(0,0,canvas.width,canvas.height);
         ctx.font = "12px Arial";
+        ctx.fillStyle = "white";
 
         var updates = 0;
         var updatesTilNextSpawn = Math.floor(Math.random() * 10);
