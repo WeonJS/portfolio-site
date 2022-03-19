@@ -76,13 +76,14 @@ class Canvas extends React.Component {
         const ctx = canvas.getContext('2d');
         ctx.fillStyle = "#333333";
         ctx.fillRect(0,0,canvas.width,canvas.height);
-        ctx.font = "12px Arial";
+        ctx.font = "3px Courier New";
         ctx.fillStyle = "white";
 
         var updates = 0;
         var updatesTilNextSpawn = Math.floor(Math.random() * 10);
 
         setInterval(() => {
+            ctx.fillRect(0,0,canvas.width,canvas.height);
             if (updates % updatesTilNextSpawn == 0) {
                 this.particles.push(new Particle(Math.random() * canvas.width, canvas.height));
             }
