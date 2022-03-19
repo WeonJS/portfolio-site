@@ -49,7 +49,7 @@ class Particle {
         this.radVal += this.radInc;
         this.udpatesPassed++;
 
-        if (this.x <= 0) {
+        if (this.y <= 0) {
             this.shouldBeDestroyed = true;
         }
     }
@@ -74,7 +74,7 @@ class Canvas extends React.Component {
     componentDidMount() {
         const canvas = this.refs.canvas;
         const ctx = canvas.getContext('2d');
-        ctx.font = "3px Courier New";
+        ctx.font = "8px Courier New";
 
         var updates = 0;
         var updatesTilNextSpawn = Math.floor(Math.random() * 10);
