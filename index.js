@@ -40,7 +40,7 @@ class Canvas extends React.Component {
 
         const canvasStyling = {
             width: "100%",
-            height: "100%"
+            height: "100vh"
         };
 
         return (
