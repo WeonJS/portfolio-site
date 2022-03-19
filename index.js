@@ -2,7 +2,6 @@ class Website extends React.Component {
     render() {
         return (
             <div id="root">
-                <Canvas></Canvas>
                 <IntroInfo></IntroInfo>
             </div>
             
