@@ -28,7 +28,7 @@ class Particle {
         this.updatesTilNextChange = null;
         this.recalculateUpdatesTilNextChange(); // calculates above
         
-
+        this.font = ""+ (12 + Math.ceil(Math.random() * 4))+"px Courier New";
         this.yvel = -Math.random() * 4;
         this.radVal = Math.random() * Math.PI; // offset initial val to avoid similar paths
         this.radInc = 0.05;
@@ -44,7 +44,7 @@ class Particle {
         this.y += this.yvel;
         this.displayXPos = this.x + this.getSinVal();
 
-        ctx.font = ""+ (12 + Math.ceil(Math.random() * 4))+"px Courier New";
+        ctx.font = this.font;
         ctx.fillText(this.text, this.displayXPos, this.y);
 
         this.radVal += this.radInc;
@@ -79,6 +79,7 @@ class Canvas extends React.Component {
 
         const ctx = canvas.getContext('2d');
         ctx.font = "12px Courier New";
+        ctx.textAlign = "center";
 
         var updates = 0;
         var updatesTilNextSpawn = Math.floor(Math.random() * 10);
