@@ -29,7 +29,7 @@ class Particle {
         this.recalculateUpdatesTilNextChange(); // calculates above
         
         this.font = ""+ (12 + Math.ceil(Math.random() * 4))+"px Courier New";
-        this.yvel = -Math.random() * 4;
+        this.yvel = (-Math.random() * 4) - 2;
         this.radVal = Math.random() * Math.PI; // offset initial val to avoid similar paths
         this.radInc = 0.05;
         this.sinAmp = 20; // how many pixels it oscillates over
