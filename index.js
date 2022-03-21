@@ -128,13 +128,13 @@ class Canvas extends React.Component {
 class IntroInfo extends React.Component {
     render() {
         const infoStyling = {
-            position: "absolute;",
-            left: "50%;",
-            top: "50%;"
+            position: "absolute",
+            left: "50%",
+            top: "50%"
         }
 
         return (
-            <div id="info" style="position: absolute;">
+            <div id="info" style={infoStyling}>
                 <img src="keon.png" ref="infoBox" />
                 <h1>Keon Davoudi</h1>
             </div>
