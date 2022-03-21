@@ -1,8 +1,12 @@
 class Website extends React.Component {
     render() {
+        const introStyle = {
+            position: "fixed", 
+            zIndex: "-3"
+        }
         return (
             <div id="website">
-                <div id="intro" style={{position: "fixed", "z-index": "-3"}}>
+                <div id="intro" style={introStyle}>
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
                 </div>
@@ -122,8 +126,7 @@ class Canvas extends React.Component {
 
         const canvasStyling = {
             width: "100%",
-            height: "100vh",
-            "z-index": 1
+            height: "100vh"
         };
 
         return (
