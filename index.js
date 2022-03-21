@@ -180,7 +180,10 @@ class IntroInfo extends React.Component {
 class ProjectListing extends React.Component {
     render() {
         const projListingStyle = {
-            "font-size": "120px",
+            "font-size": "12px",
+            fontFamily: "Courier New",
+            color: "white",
+            margin: "5px",
             height: "100px",
             borderStyle: "solid",
             borderWidth: "1px",
