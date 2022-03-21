@@ -12,6 +12,7 @@ class Website extends React.Component {
                 </div>
                 <div id="content">
                     <ProjectListing></ProjectListing>
+                    
                 </div>
             </div>
         );
@@ -117,7 +118,6 @@ class Canvas extends React.Component {
                 ctx.fillStyle = "#666666";
                 this.particles[i].update(ctx);
             }
-            console.log(this.particles);
             updates++;
         }, loopInterval);
     }
@@ -166,7 +166,7 @@ class IntroInfo extends React.Component {
 class ProjectListing extends React.Component {
     render() {
         const projListingStyle = {
-            "font-size": "32px"
+            "font-size": "320px"
         };
 
         return (
