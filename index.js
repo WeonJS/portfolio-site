@@ -24,6 +24,11 @@ class Particle {
             "y += this.yvel;",
             '<canvas ref="canvas" style={canvasStyling}/>',
             "const canvas = this.refs.canvas;",
+            "this.particles.push;",
+            "this.text = this.getRandomText();",
+            "Math.sin(this.radVal) * this.sinAmp;",
+            "particles = [];",
+            "this.particles[i].update(ctx);"
             
         ]
         this.text = this.getRandomText();
@@ -36,7 +41,7 @@ class Particle {
         this.yvel = (-Math.random() * 4) - 2;
         this.radVal = Math.random() * Math.PI; // offset initial val to avoid similar paths
         this.radInc = 0.05;
-        this.sinAmp = 20; // how many pixels it oscillates over
+        this.sinAmp = 10 + Math.random() * 10; // how many pixels it oscillates over
     }
 
     update(ctx) {
