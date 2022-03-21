@@ -86,7 +86,7 @@ class Canvas extends React.Component {
         ctx.textAlign = "center";
 
         var updates = 0;
-        var updatesTilNextSpawn = 5 + Math.floor(Math.random() * 10);
+        var updatesTilNextSpawn = 3 + Math.floor(Math.random() * 7);
 
         var loopInterval = 30;
         setInterval(() => {
