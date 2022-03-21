@@ -4,6 +4,7 @@ class Website extends React.Component {
         }
 
         const contentStyle = {
+            backgroundColor: "black"
         }
         return (
             <div id="website">
@@ -139,6 +140,7 @@ class Canvas extends React.Component {
         const canvasStyling = {
             width: "100%",
             height: "100vh"
+
         };
 
         return (
@@ -178,7 +180,11 @@ class IntroInfo extends React.Component {
 class ProjectListing extends React.Component {
     render() {
         const projListingStyle = {
-            "font-size": "120px"
+            "font-size": "120px",
+            height: "100px",
+            borderStyle: "solid",
+            borderWidth: "1px",
+            borderColor: "white"
         };
 
         return (
