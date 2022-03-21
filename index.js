@@ -6,9 +6,10 @@ class Website extends React.Component {
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
                 </div>
+                <div id="content">
+                    <ProjectListing></ProjectListing>
+                </div>
             </div>
-            
-            
         );
     }
 }
@@ -156,6 +157,18 @@ class IntroInfo extends React.Component {
                 </div>
                 
             </div>
+        );
+    }
+}
+
+class ProjectListing extends React.Component {
+    render() {
+        const projListingStyle = {
+            "font-size": "32px"
+        };
+
+        return (
+            <div class="project" style={projListingStyle}>project</div>
         );
     }
 }
