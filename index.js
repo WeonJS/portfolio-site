@@ -6,7 +6,7 @@ class Website extends React.Component {
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
                 </div>
-                <p>some other text!!</p>
+                <p style={{"z-index": 1}}>some other text!!</p>
             </div>
             
             
@@ -139,7 +139,8 @@ class IntroInfo extends React.Component {
             position: "absolute",
             left: "50%",
             top: "50%",
-            transform: "translate(-50%, -50%)"
+            transform: "translate(-50%, -50%)",
+            "z-index": 0
         }
 
         const nameStyling = {
