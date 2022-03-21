@@ -1,12 +1,9 @@
 class Website extends React.Component {
     render() {
         const introStyle = {
-            position: "fixed", 
-            zIndex: "0"
         }
 
         const contentStyle = {
-            zIndex: "1"
         }
         return (
             <div id="website">
