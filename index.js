@@ -136,15 +136,17 @@ class IntroInfo extends React.Component {
 
         const nameStyling = {
             "font-family": "Courier New",
-            "font-size": "32px",
-            color: "white",
             "text-align": "center"
         };
 
         return (
             <div id="info" style={infoStyling}>
                 <img src="keon.png" ref="infoBox" />
-                <h1>Keon Davoudi</h1>
+                <div id="text" style={nameStyling}>
+                    <h1 style={{color: "white", "font-size": "32px"}}>Keon Davoudi</h1>
+                    <p style={{color: "#999999", "font-size": "18px"}}><strong>Computer Science</strong> Student At <strong>ASU</strong></p>
+                </div>
+                
             </div>
         );
     }
