@@ -134,6 +134,13 @@ class IntroInfo extends React.Component {
             transform: "translate(-50%, -50%)"
         }
 
+        const nameStyling = {
+            "font-family": "Courier New",
+            "font-size": "32px",
+            color: "white",
+            "text-align": "center"
+        };
+
         return (
             <div id="info" style={infoStyling}>
                 <img src="keon.png" ref="infoBox" />
