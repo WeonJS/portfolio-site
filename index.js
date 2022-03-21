@@ -4,13 +4,18 @@ class Website extends React.Component {
             position: "fixed", 
             zIndex: "-3"
         }
+
+        const contentStyle = {
+            marginTop: "100vh",
+            backgroundColor: "white"
+        }
         return (
             <div id="website">
                 <div id="intro" style={introStyle}>
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
                 </div>
-                <div id="content">
+                <div id="content" style={contentStyle}>
                     <ProjectListing></ProjectListing>
                     <ProjectListing></ProjectListing>
                     <ProjectListing></ProjectListing>
@@ -22,8 +27,8 @@ class Website extends React.Component {
                     <ProjectListing></ProjectListing>
                     <ProjectListing></ProjectListing>
                     <ProjectListing></ProjectListing>
+
                     <ProjectListing></ProjectListing>
-                    
                 </div>
             </div>
         );
