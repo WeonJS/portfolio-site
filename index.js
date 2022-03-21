@@ -2,11 +2,10 @@ class Website extends React.Component {
     render() {
         return (
             <div id="website">
-                <div id="intro" style={{position: "fixed"}}>
+                <div id="intro">
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
                 </div>
-                <p style={{"z-index": 1}}>some other text!!</p>
             </div>
             
             
@@ -140,7 +139,7 @@ class IntroInfo extends React.Component {
             left: "50%",
             top: "50%",
             transform: "translate(-50%, -50%)",
-            "z-index": 0
+            "background-attachment": "fixed"
         }
 
         const nameStyling = {
