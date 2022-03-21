@@ -8,7 +8,7 @@ class Website extends React.Component {
         const contentStyle = {
             marginTop: "100vh",
             backgroundColor: "rgba(255,255,255,0.5)",
-            zIndex: "1"
+            zIndex: "-1"
         }
         return (
             <div id="website">
