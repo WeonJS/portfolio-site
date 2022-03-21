@@ -2,7 +2,7 @@ class Website extends React.Component {
     render() {
         return (
             <div id="website">
-                <div id="intro">
+                <div id="intro" style={{position: "fixed"}}>
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
                 </div>
@@ -139,8 +139,7 @@ class IntroInfo extends React.Component {
             position: "absolute",
             left: "50%",
             top: "50%",
-            transform: "translate(-50%, -50%)",
-            "position": "fixed"
+            transform: "translate(-50%, -50%)"
         }
 
         const nameStyling = {
