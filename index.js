@@ -12,6 +12,11 @@ class Website extends React.Component {
                 </div>
                 <div id="content">
                     <ProjectListing></ProjectListing>
+                    <ProjectListing></ProjectListing>
+                    <ProjectListing></ProjectListing>
+                    <ProjectListing></ProjectListing>
+
+                    <ProjectListing></ProjectListing>
                     
                 </div>
             </div>
@@ -166,7 +171,7 @@ class IntroInfo extends React.Component {
 class ProjectListing extends React.Component {
     render() {
         const projListingStyle = {
-            "font-size": "320px"
+            "font-size": "120px"
         };
 
         return (
