@@ -88,6 +88,7 @@ class Canvas extends React.Component {
         var updates = 0;
         var updatesTilNextSpawn = 5 + Math.floor(Math.random() * 10);
 
+        var loopInterval = 30;
         setInterval(() => {
             ctx.fillStyle = "#333333";
             ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -106,7 +107,7 @@ class Canvas extends React.Component {
             }
             console.log(this.particles);
             updates++;
-        }, 60);
+        }, loopInterval);
     }
 
     render() {
@@ -127,13 +128,13 @@ class Canvas extends React.Component {
 class IntroInfo extends React.Component {
     render() {
         const infoStyling = {
-            "position": "absolute;",
-            "left": "50%;",
-            "top": "50%;",
+            position: "absolute;",
+            left: "50%;",
+            top: "50%;"
         }
 
         return (
-            <div id="info" style={infoStyling}>
+            <div id="info" style="position: absolute;">
                 <img src="keon.png" ref="infoBox" />
                 <h1>Keon Davoudi</h1>
             </div>
