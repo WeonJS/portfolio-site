@@ -140,7 +140,7 @@ class IntroInfo extends React.Component {
             left: "50%",
             top: "50%",
             transform: "translate(-50%, -50%)",
-            "background-attachment": "fixed"
+            "position": "fixed"
         }
 
         const nameStyling = {
