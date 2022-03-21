@@ -2,8 +2,11 @@ class Website extends React.Component {
     render() {
         return (
             <div id="website">
-                <Canvas></Canvas>
-                <IntroInfo></IntroInfo>
+                <div id="intro" style={{position: "fixed"}}>
+                    <Canvas></Canvas>
+                    <IntroInfo></IntroInfo>
+                </div>
+                <p>some other text!!</p>
             </div>
             
             
