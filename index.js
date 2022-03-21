@@ -7,7 +7,7 @@ class Website extends React.Component {
 
         const contentStyle = {
             marginTop: "100vh",
-            backgroundColor: "white",
+            backgroundColor: "rgba(255,255,255,100)",
             zIndex: "1"
         }
         return (
