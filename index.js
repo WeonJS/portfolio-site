@@ -191,7 +191,11 @@ class ProjectListing extends React.Component {
         };
 
         return (
-            <div class="project" style={projListingStyle}>project</div>
+            <div class="project" style={projListingStyle}>
+                <div id="headerArea" style={{height: "10%"}}>
+                    project title
+                </div>
+            </div>
         );
     }
 }
