@@ -19,7 +19,9 @@ class Website extends React.Component {
                     <IntroInfo></IntroInfo>
                 </div>
                 <div id="content" style={contentStyle}>
-                    {this.renderProjListing("FTC Robotics Competition", "Code base of team ACE robotics for 2020 FTC competition.", "ftc.png")}
+                    {this.renderProjListing("FTC Robotics Competition", 
+                    "Code base of team ACE robotics for 2020 FTC competition.", 
+                    "ftc.jpg")}
                 </div>
             </div>
         );
@@ -43,7 +45,8 @@ class Particle {
             "this.text = this.getRandomText();",
             "Math.sin(this.radVal) * this.sinAmp;",
             "particles = [];",
-            "this.particles[i].update(ctx);"
+            "this.particles[i].update(ctx);",
+            "fiona smells"
             
         ]
         this.text = this.getRandomText();
@@ -165,7 +168,7 @@ class IntroInfo extends React.Component {
                     <h1 style={{color: "white", fontSize: "32px"}}>
                         <span style={{backgroundColor: "#111111", lineHeight: "2"}}>KEON DAVOUDI</span>
                     </h1>
-                    <p style={{color: "#999999", "font-size": "18px"}}><strong>Computer Science</strong> Student At <strong>ASU</strong></p>
+                    <p style={{color: "#999999", fontSize: "18px"}}><strong>Computer Science</strong> Student At <strong>ASU</strong></p>
                 </div>
                 
             </div>
