@@ -215,7 +215,7 @@ class ProjectListing extends React.Component {
                 <img src={this.props.projImagePath} style={thumbnailStyle}/>
                 <div id="projText" style={projTextStyle}>
                     <h1 style={projTitleStyle}>{this.props.projTitle}</h1>
-                    <p style={projDescStyle}>{this.props.projDesc}</p>
+                    <p style={projDescStyle}>{this.props.projDesc}</p> {/* this is hidden visually because too far down */}
                 </div>
             </div>
         );
