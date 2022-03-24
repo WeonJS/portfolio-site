@@ -187,13 +187,15 @@ class ProjectListing extends React.Component {
             height: "10vw",
             width: "100vw",
             backgroundColor: "#222222",
-            borderRadius: "10px"
+            borderRadius: "10px",
+            margin: "5px"
         };
 
         const thumbnailStyle = {
             height: "128px",
             width: "128px",
-            borderRadius: "10px"
+            borderRadius: "10px",
+            top: "50%"
         };
 
         const projTitleStyle = {
