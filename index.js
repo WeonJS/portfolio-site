@@ -1,7 +1,7 @@
 class Website extends React.Component {
     renderProjListing(projTitle, projDesc, projImagePath) {
         return (
-            <ProjectListing projTitle="FTC Robotics" projDesc="Code that I contributed to for an FTC robotics competition." projImagePath="ftc.png"></ProjectListing>
+            <ProjectListing projTitle={projTitle} projDesc={projDesc} projImagePath={projImagePath}></ProjectListing>
         );
     }
     
@@ -19,7 +19,7 @@ class Website extends React.Component {
                     <IntroInfo></IntroInfo>
                 </div>
                 <div id="content" style={contentStyle}>
-                    
+                    {this.renderProjListing("FTC Robotics Competition", "Code base of team ACE robotics for 2020 FTC competition.", "ftc.png")}
                 </div>
             </div>
         );
