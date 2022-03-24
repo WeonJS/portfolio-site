@@ -188,8 +188,8 @@ class ProjectListing extends React.Component {
         };
 
         const thumbnailStyle = {
-            height: "256px",
-            width: "256px",
+            height: "128px",
+            width: "128px",
             borderRadius: "10px"
         };
 
