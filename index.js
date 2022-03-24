@@ -184,17 +184,15 @@ class ProjectListing extends React.Component {
             fontFamily: "Courier New",
             color: "white",
             margin: "5px",
-            height: "100px",
-            borderStyle: "solid",
-            borderWidth: "1px",
-            borderColor: "white"
+            height: "10vh",
+            width: "10vw",
+            backgroundColor: "#222222",
+            borderRadius: "10px"
         };
 
         return (
             <div class="project" style={projListingStyle}>
-                <div id="headerArea" style={{height: "13%", borderBottomStyle: "solid", borderBottomWidth: "1px", borderBottomColor: "white"}}>
-                    <strong>project title</strong>
-                </div>
+                
             </div>
         );
     }
