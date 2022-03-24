@@ -192,25 +192,31 @@ class ProjectListing extends React.Component {
         };
 
         const thumbnailStyle = {
-            height: "128px",
-            width: "128px",
+            height: "100%",
+            width: "10%",
             borderRadius: "10px",
             top: "50%"
         };
 
         const projTitleStyle = {
-
+            display: "inline"
         };
 
         const projDescStyle = {
 
         };
 
+        const projTextStyle = {
+            display: "inline"
+        };
+
         return (
             <div class="project" style={projListingStyle}>
                 <img src={this.props.projImagePath} style={thumbnailStyle}/>
-                <h1 style={projTitleStyle}>{this.props.projTitle}</h1>
-                <p style={projDescStyle}>{this.props.projDesc}</p>
+                <div id="projText" style={projTextStyle}>
+                    <h1 style={projTitleStyle}>{this.props.projTitle}</h1>
+                    <p style={projDescStyle}>{this.props.projDesc}</p>
+                </div>
             </div>
         );
     }
