@@ -1,4 +1,10 @@
 class Website extends React.Component {
+    renderProjListing(projTitle, projDesc, projImagePath) {
+        return (
+            <ProjectListing projTitle="FTC Robotics" projDesc="Code that I contributed to for an FTC robotics competition." projImagePath="ftc.png"></ProjectListing>
+        );
+    }
+    
     render() {
         const introStyle = {
         }
@@ -13,19 +19,7 @@ class Website extends React.Component {
                     <IntroInfo></IntroInfo>
                 </div>
                 <div id="content" style={contentStyle}>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-                    <ProjectListing></ProjectListing>
-
-                    <ProjectListing></ProjectListing>
+                    
                 </div>
             </div>
         );
@@ -180,6 +174,7 @@ class IntroInfo extends React.Component {
 }
 
 class ProjectListing extends React.Component {
+
     render() {
         const projListingStyle = {
             "font-size": "12px",
@@ -187,14 +182,28 @@ class ProjectListing extends React.Component {
             color: "white",
             margin: "5px",
             height: "10vw",
-            width: "10vw",
+            width: "100vw",
             backgroundColor: "#222222",
             borderRadius: "10px"
         };
 
+        const thumbnailStyle = {
+
+        };
+
+        const projTitleStyle = {
+
+        };
+
+        const projDescStyle = {
+
+        };
+
         return (
             <div class="project" style={projListingStyle}>
-                
+                <img src={this.props.projImagePath} style={thumbnailStyle}/>
+                <h1 style={projTitleStyle}>{this.props.projTitle}</h1>
+                <p style={projDescStyle}>{this.props.projDesc}</p>
             </div>
         );
     }
