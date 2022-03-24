@@ -188,7 +188,7 @@ class ProjectListing extends React.Component {
             width: "100vw",
             backgroundColor: "#222222",
             borderRadius: "10px",
-            margin: "5px"
+            padding: "5px"
         };
 
         const thumbnailStyle = {
