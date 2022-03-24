@@ -4,10 +4,10 @@ class Website extends React.Component {
         }
 
         const contentStyle = {
-            backgroundColor: "black"
+            backgroundColor: "#999999"
         }
         return (
-            <div id="website">
+            <div id="website" style={{margin: "0px", padding: "0px"}}>
                 <div id="intro" style={introStyle}>
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
@@ -168,7 +168,9 @@ class IntroInfo extends React.Component {
             <div id="info" style={infoStyling}>
                 <img src="keon.png" ref="infoBox" />
                 <div id="text" style={nameStyling}>
-                    <h1 style={{color: "white", "font-size": "32px"}}>Keon Davoudi</h1>
+                    <h1 style={{color: "white", fontSize: "32px"}}>
+                        <span style={{backgroundColor: "#111111", lineHeight: "2"}}>KEON DAVOUDI</span>
+                    </h1>
                     <p style={{color: "#999999", "font-size": "18px"}}><strong>Computer Science</strong> Student At <strong>ASU</strong></p>
                 </div>
                 
@@ -184,7 +186,7 @@ class ProjectListing extends React.Component {
             fontFamily: "Courier New",
             color: "white",
             margin: "5px",
-            height: "10vh",
+            height: "10vw",
             width: "10vw",
             backgroundColor: "#222222",
             borderRadius: "10px"
