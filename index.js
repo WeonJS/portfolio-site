@@ -203,16 +203,17 @@ class ProjectListing extends React.Component {
             fontFamily: "Courier New",
             color: "white",
             margin: "5px",
-            height: "10vw",
+            height: "20vw",
             width: "100vw",
             backgroundColor: "#222222",
             borderRadius: "10px",
-            padding: "5px"
+            padding: "5px",
+            display: "inline-block"
         };
 
         const thumbnailStyle = {
             height: "100%",
-            width: "10%",
+            width: "20%",
             borderRadius: "10px",
             top: "50%"
         };
