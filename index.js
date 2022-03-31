@@ -18,6 +18,7 @@ class Website extends React.Component {
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
                 </div>
+                <Navbar></Navbar>
                 <div id="content" style={contentStyle}>
                     {this.renderProjListing("FTC Robotics Competition", 
                     "Code base of team ACE robotics for 2020 FTC competition.", 
@@ -208,7 +209,7 @@ class ProjectListing extends React.Component {
             backgroundColor: "#222222",
             borderRadius: "10px",
             padding: "5px",
-            display: "inline-block"
+            display: "inline"
         };
 
         const thumbnailStyle = {
