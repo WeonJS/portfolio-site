@@ -216,7 +216,8 @@ class ProjectListing extends React.Component {
             width: "20%",
             borderRadius: "10px",
             top: "50%",
-            float: "left"
+            float: "left",
+            marginRight: "10px"
         };
 
         const projTitleStyle = {
@@ -228,7 +229,7 @@ class ProjectListing extends React.Component {
         };
 
         const projTextStyle = {
-
+            fontSize: "22px"
         };
 
         return (
