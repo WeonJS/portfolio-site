@@ -218,11 +218,12 @@ class ProjectListing extends React.Component {
         };
 
         const projTitleStyle = {
-            display: "inline"
+            display: "inline",
+            top: "0px"
         };
 
         const projDescStyle = {
-
+            
         };
 
         const projTextStyle = {
