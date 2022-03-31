@@ -209,7 +209,6 @@ class ProjectListing extends React.Component {
             backgroundColor: "#222222",
             borderRadius: "10px",
             padding: "5px",
-            display: "inline"
         };
 
         const thumbnailStyle = {
