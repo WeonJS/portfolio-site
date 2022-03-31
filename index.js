@@ -218,8 +218,7 @@ class ProjectListing extends React.Component {
         };
 
         const projTitleStyle = {
-            display: "inline",
-            top: "0px"
+
         };
 
         const projDescStyle = {
@@ -227,9 +226,7 @@ class ProjectListing extends React.Component {
         };
 
         const projTextStyle = {
-            display: "inline",
-            width: "100%",
-            height: "100%"
+
         };
 
         return (
