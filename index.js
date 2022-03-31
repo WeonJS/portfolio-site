@@ -10,7 +10,7 @@ class Website extends React.Component {
         }
 
         const contentStyle = {
-            backgroundColor: "#999999"
+
         }
         return (
             <div id="website" style={{margin: "0px", padding: "0px"}}>
@@ -215,7 +215,8 @@ class ProjectListing extends React.Component {
             height: "100%",
             width: "20%",
             borderRadius: "10px",
-            top: "50%"
+            top: "50%",
+            float: "left"
         };
 
         const projTitleStyle = {
