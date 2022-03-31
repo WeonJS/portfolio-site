@@ -176,6 +176,25 @@ class IntroInfo extends React.Component {
     }
 }
 
+class Navbar extends React.Component {
+    render() {
+        const navbarStyle = {
+            textAlign: "center",
+
+        };
+
+        return (
+            <div id="navbar">
+                <ul style={{display: "inline-block", listStyle: "none"}}>
+                    <li><a>About</a></li>
+                    <li><a>Projects</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+        );
+    }
+}
+
 class ProjectListing extends React.Component {
 
     render() {
