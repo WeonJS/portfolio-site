@@ -226,7 +226,9 @@ class ProjectListing extends React.Component {
         };
 
         const projTextStyle = {
-            display: "inline"
+            display: "inline",
+            width: "100%",
+            height: "100%"
         };
 
         return (
