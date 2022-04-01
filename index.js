@@ -21,7 +21,7 @@ class Website extends React.Component {
                 <Navbar></Navbar>
                 <div id="content" style={contentStyle}>
                     {this.renderProjListing("FTC Robotics Competition", 
-                    "Code base of team ACE robotics for 2020 FTC competition.", 
+                    "Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.", 
                     "ftc.jpg")}
                 </div>
             </div>
@@ -225,7 +225,7 @@ class ProjectListing extends React.Component {
         };
 
         const projDescStyle = {
-            
+            overflow: "scroll"
         };
 
         const projTextStyle = {
