@@ -21,7 +21,7 @@ class Website extends React.Component {
                 <Navbar></Navbar>
                 <div id="content" style={contentStyle}>
                     {this.renderProjListing("FTC Robotics Competition", 
-                    "Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.Code base of team ACE robotics for 2020 FTC competition.", 
+                    "Code base of team ACE robotics for 2020 FTC competition.", 
                     "ftc.jpg")}
                 </div>
             </div>
@@ -186,10 +186,10 @@ class Navbar extends React.Component {
 
         return (
             <div id="navbar">
-                <ul style={{display: "inline-block", listStyle: "none"}}>
-                    <li><a>About</a></li>
-                    <li><a>Projects</a></li>
-                    <li><a>Contact</a></li>
+                <ul style={{listStyle: "none"}}>
+                    <li style={{display: "inline-block"}}><a>About</a></li>
+                    <li style={{display: "inline-block"}}><a>Projects</a></li>
+                    <li style={{display: "inline-block"}}><a>Contact</a></li>
                 </ul>
             </div>
         );
