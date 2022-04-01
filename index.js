@@ -185,7 +185,7 @@ class Navbar extends React.Component {
         };
 
         return (
-            <div id="navbar">
+            <div id="navbar" style={navbarStyle}>
                 <ul style={{listStyle: "none"}}>
                     <li style={{display: "inline-block"}}><a>About</a></li>
                     <li style={{display: "inline-block"}}><a>Projects</a></li>
