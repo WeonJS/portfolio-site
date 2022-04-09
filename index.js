@@ -184,12 +184,19 @@ class Navbar extends React.Component {
 
         };
 
+        const listItemStyle = {
+            display: "inline-block",
+            borderRadius: "5px",
+            backgroundColor: "grey",
+            padding: "5px"
+        }
+
         return (
             <div id="navbar" style={navbarStyle}>
                 <ul style={{listStyle: "none"}}>
-                    <li style={{display: "inline-block"}}><a>About</a></li>
-                    <li style={{display: "inline-block"}}><a>Projects</a></li>
-                    <li style={{display: "inline-block"}}><a>Contact</a></li>
+                    <li style={listItemStyle}><a>About</a></li>
+                    <li style={listItemStyle}><a>Projects</a></li>
+                    <li style={listItemStyle}><a>Contact</a></li>
                 </ul>
             </div>
         );
