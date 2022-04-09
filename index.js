@@ -199,12 +199,16 @@ class Navbar extends React.Component {
             backgroundColor: "grey",
             padding: "5px",
             margin: "8px",
-        
+        }
+
+        const listStyle = {
+            listStyle: "none",
+            margin: "0px"
         }
 
         return (
             <div id="navbar" style={navbarStyle}>
-                <ul style={{listStyle: "none"}}>
+                <ul style={listStyle}>
                     <li style={listItemStyle}><a>About</a></li>
                     <li style={listItemStyle}><a>Projects</a></li>
                     <li style={listItemStyle}><a>Contact</a></li>
