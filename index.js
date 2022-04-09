@@ -26,8 +26,9 @@ class Website extends React.Component {
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
                 </div>
-                <Navbar></Navbar>
+                
                 <div id="content" style={contentStyle}>
+                    <Navbar></Navbar>
                     {this.renderProjListing("FTC Robotics Competition", 
                     "Code base of team ACE robotics for 2020 FTC competition.", 
                     "ftc.jpg")}
@@ -145,7 +146,7 @@ class Canvas extends React.Component {
 
         const canvasStyling = {
             width: "100%",
-            height: "100%"
+            height: "100vh"
 
         };
 
