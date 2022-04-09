@@ -18,7 +18,8 @@ class Website extends React.Component {
 
         const websiteStyling = {
             margin: "0px",
-            padding: "0px"
+            padding: "0px",
+            backgroundColor: "black"
         }
         return (
             <div id="website" style={websiteStyling}>
