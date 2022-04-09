@@ -161,10 +161,6 @@ class Canvas extends React.Component {
 class IntroInfo extends React.Component {
     render() {
         const infoStyling = {
-            position: "absolute",
-            left: "50%",
-            top: "50%",
-            transform: "translate(-50%, -50%)"
         }
 
         const nameStyling = {
