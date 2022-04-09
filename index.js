@@ -190,7 +190,7 @@ class Navbar extends React.Component {
             borderRadius: "5px",
             backgroundColor: "grey",
             padding: "5px",
-            marginRight: "3px",
+            margin: "8px",
         
         }
 
