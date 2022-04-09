@@ -225,7 +225,7 @@ class ProjectListing extends React.Component {
             "font-size": "12px",
             fontFamily: "Courier New",
             color: "white",
-            margin: "5px",
+            margin: "0px",
             height: "20vw",
             width: "100vw",
             backgroundColor: "#222222",
