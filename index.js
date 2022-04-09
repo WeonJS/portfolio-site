@@ -7,13 +7,21 @@ class Website extends React.Component {
     
     render() {
         const introStyle = {
+            margin: "0px",
+            padding: "0px"
         }
 
         const contentStyle = {
+            margin: "0px",
+            padding: "0px"
+        }
 
+        const websiteStyling = {
+            margin: "0px",
+            padding: "0px"
         }
         return (
-            <div id="website" style={{margin: "0px", padding: "0px"}}>
+            <div id="website" style={websiteStyling}>
                 <div id="intro" style={introStyle}>
                     <Canvas></Canvas>
                     <IntroInfo></IntroInfo>
