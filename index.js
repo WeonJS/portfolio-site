@@ -181,14 +181,17 @@ class Navbar extends React.Component {
     render() {
         const navbarStyle = {
             textAlign: "center",
-
+            fontFamily: "Consolas",
+            backgroundColor: "black"
         };
 
         const listItemStyle = {
             display: "inline-block",
             borderRadius: "5px",
             backgroundColor: "grey",
-            padding: "5px"
+            padding: "5px",
+            marginRight: "3px",
+        
         }
 
         return (
