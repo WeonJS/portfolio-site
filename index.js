@@ -8,7 +8,8 @@ class Website extends React.Component {
     render() {
         const introStyle = {
             margin: "0px",
-            padding: "0px"
+            padding: "0px",
+            textAlign: "center"
         }
 
         const contentStyle = {
@@ -161,6 +162,8 @@ class Canvas extends React.Component {
 class IntroInfo extends React.Component {
     render() {
         const infoStyling = {
+            zIndex: "-50",
+            
         }
 
         const nameStyling = {
