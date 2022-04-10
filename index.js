@@ -1,9 +1,5 @@
 class Website extends React.Component {
-    renderProjListing(projTitle, projDesc, projImagePath) {
-        return (
-            <ProjectListing projTitle={projTitle} projDesc={projDesc} projImagePath={projImagePath}></ProjectListing>
-        );
-    }
+    
     
     render() {
         const introStyle = {
@@ -22,7 +18,7 @@ class Website extends React.Component {
         const websiteStyling = {
             margin: "0px",
             padding: "0px",
-            backgroundColor: "black"
+            backgroundColor: "white"
         }
         return (
             <div id="website" style={websiteStyling}>
@@ -33,9 +29,7 @@ class Website extends React.Component {
                 
                 <div id="content" style={contentStyle}>
                     <Navbar></Navbar>
-                    {this.renderProjListing("FTC Robotics Competition", 
-                    "Code base of team ACE robotics for 2020 FTC competition.", 
-                    "ftc.jpg")}
+                    <Projects></Projects>
                 </div>
             </div>
         );
@@ -106,6 +100,27 @@ class Particle {
 
     getRandomText() {
         return this.possibleText[Math.floor(Math.random() * this.possibleText.length)];
+    }
+}
+
+class Projects extends React.Component {
+    renderProjListing(projTitle, projDesc, projImagePath) {
+        return (
+            <ProjectListing projTitle={projTitle} projDesc={projDesc} projImagePath={projImagePath}></ProjectListing>
+        );
+    }
+
+    render() {
+        const projectsStyling = {
+            padding: "10px"
+        }
+        return (
+            <div id="projects" style={projectsStyling}>
+                {this.renderProjListing("FTC Robotics Competition", 
+                    "Code base of team ACE robotics for 2020 FTC competition.", 
+                    "ftc.jpg")}
+            </div>
+        );
     }
 }
 
@@ -241,24 +256,25 @@ class ProjectListing extends React.Component {
 
     render() {
         const projListingStyle = {
-            "font-size": "12px",
+            "font-size": "12vw",
             fontFamily: "Courier New",
             color: "white",
-            margin: "0px",
-            height: "20vw",
-            width: "100vw",
-            backgroundColor: "#222222",
-            borderRadius: "10px",
-            padding: "5px",
+            margin: "5px",
+            height: "10vw",
+            backgroundColor: "white",
+            padding: "25px",
+            borderStyle: "solid",
+            borderColor: "black"
         };
 
         const thumbnailStyle = {
             height: "100%",
-            width: "20%",
-            borderRadius: "10px",
+            width: "10%",
             top: "50%",
             float: "left",
-            marginRight: "10px"
+            marginRight: "20px",
+            borderStyle: "solid",
+            borderColor: "black"
         };
 
         const projTitleStyle = {
@@ -266,11 +282,12 @@ class ProjectListing extends React.Component {
         };
 
         const projDescStyle = {
-            overflow: "scroll"
+            
         };
 
         const projTextStyle = {
-            fontSize: "22px"
+            fontSize: "22px",
+            color: "black"
         };
 
         return (
