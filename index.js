@@ -24,9 +24,9 @@ class Website extends React.Component {
         }
         return (
             <div id="website" style={websiteStyling}>
-                <div id="intro" style={introStyle}>
+                <div id="header" style={introStyle}>
                     <Canvas></Canvas>
-                    <IntroInfo></IntroInfo>
+                    <HeaderInfo></HeaderInfo>
                 </div>
                 
                 <div id="content" style={contentStyle}>
@@ -159,28 +159,27 @@ class Canvas extends React.Component {
 
 }
 
-class IntroInfo extends React.Component {
+class HeaderInfo extends React.Component {
     render() {
         const infoStyling = {
-            zIndex: "-50",
-            
+            "font-family": "Courier New",
+            "text-align": "center"
         }
 
         const nameStyling = {
-            "font-family": "Courier New",
-            "text-align": "center"
+            backgroundColor: "seafoamgreen"
         };
+
+        const subtextStyling = {
+            color: "#999999"
+        }
 
         return (
             <div id="info" style={infoStyling}>
-                <img src="keon.png" ref="infoBox" />
-                <div id="text" style={nameStyling}>
-                    <h1 style={{color: "white", fontSize: "32px"}}>
-                        <span style={{backgroundColor: "#111111", lineHeight: "2"}}>KEON DAVOUDI</span>
-                    </h1>
-                    <p style={{color: "#999999", fontSize: "18px"}}><strong>Computer Science</strong> Student At <strong>ASU</strong></p>
-                </div>
-                
+                <h1>
+                    <span style={nameStyling}>KEON DAVOUDI</span>
+                </h1>
+                <p style={subtextStyling}><strong>Computer science</strong> student at <strong>ASU</strong></p>
             </div>
         );
     }
