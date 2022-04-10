@@ -9,12 +9,14 @@ class Website extends React.Component {
         const introStyle = {
             margin: "0px",
             padding: "0px",
-            textAlign: "center"
+            textAlign: "center",
         }
 
         const contentStyle = {
             margin: "0px",
-            padding: "0px"
+            padding: "0px",
+            zIndex: "3",
+            position: "relative"
         }
 
         const websiteStyling = {
@@ -114,7 +116,7 @@ class Canvas extends React.Component {
     componentDidMount() {
         var canvas = this.refs.canvas;
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.height = window.innerHeight/2;
 
         const ctx = canvas.getContext('2d');
         ctx.font = "12px Courier New";
@@ -125,7 +127,7 @@ class Canvas extends React.Component {
 
         var loopInterval = 30;
         setInterval(() => {
-            ctx.fillStyle = "#333333";
+            ctx.fillStyle = "#FFFFFF";
             ctx.fillRect(0,0,canvas.width,canvas.height);
             
             if (updates % updatesTilNextSpawn == 0) {
@@ -137,7 +139,7 @@ class Canvas extends React.Component {
                     var partIndex = this.particles.indexOf(this.particles[i]);
                     this.particles.splice(partIndex, 1);
                 }
-                ctx.fillStyle = "#666666";
+                ctx.fillStyle = "#9FE2BF";
                 this.particles[i].update(ctx);
             }
             updates++;
@@ -149,7 +151,7 @@ class Canvas extends React.Component {
         const canvasStyling = {
             width: "100%",
             height: "50vh",
-            margin: "0px"
+            margin: "0px",
         };
 
         return (
@@ -163,19 +165,35 @@ class HeaderInfo extends React.Component {
     render() {
         const infoStyling = {
             "font-family": "Courier New",
-            "text-align": "center"
+            "text-align": "center",
+            position: "absolute",
+            top: "25%",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
+            zIndex: "1"
         }
 
         const nameStyling = {
-            backgroundColor: "seafoamgreen"
+            backgroundColor: "#9FE2BF",
+            borderRadius: "0px",
+            padding: "3px",
+            position: "absolute",
+            top: "49%",
+            left: "40%"
         };
 
         const subtextStyling = {
-            color: "#999999"
+            color: "#000000"
+        }
+
+        const imageStyling = {
+            width: "512px",
+            height: "512px",
         }
 
         return (
             <div id="info" style={infoStyling}>
+                <img src="head.png" style={imageStyling} />
                 <h1>
                     <span style={nameStyling}>KEON DAVOUDI</span>
                 </h1>
@@ -191,13 +209,13 @@ class Navbar extends React.Component {
             textAlign: "center",
             fontFamily: "Consolas",
             backgroundColor: "black",
-            margin: "0px"
+            margin: "0px",
         };
 
         const listItemStyle = {
             display: "inline-block",
-            borderRadius: "5px",
-            backgroundColor: "grey",
+            borderRadius: "0px",
+            backgroundColor: "#9FE2BF",
             padding: "5px",
             margin: "8px",
         }
