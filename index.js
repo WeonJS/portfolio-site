@@ -208,7 +208,7 @@ class HeaderInfo extends React.Component {
 
         return (
             <div id="info" style={infoStyling}>
-                {/* <img src="head.png" style={imageStyling} /> */}
+                <img src="head.png" style={imageStyling} />
                 <h1>
                     <span style={nameStyling}>KEON DAVOUDI</span>
                 </h1>
