@@ -164,7 +164,7 @@ class HeaderInfo extends React.Component {
 
     render() {
         const infoStyling = {
-            "font-family": "Consolas",
+            "font-family": "Courier New",
             "text-align": "center",
             position: "absolute",
             top: "25%",
