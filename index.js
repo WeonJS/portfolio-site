@@ -63,7 +63,8 @@ class Particle {
         this.updatesTilNextChange = null;
         this.recalculateUpdatesTilNextChange(); // calculates above
         
-        this.font = ""+ (12 + Math.ceil(Math.random() * 4))+"px Courier New";
+        this.fontSizeMin = 16;
+        this.font = ""+ (this.fontSizeMin + Math.ceil(Math.random() * 4))+"px Courier New";
         this.yvel = (-Math.random() * 4) - 2;
         this.radVal = Math.random() * Math.PI; // offset initial val to avoid similar paths
         this.radInc = 0.05;
@@ -100,35 +101,6 @@ class Particle {
 
     getRandomText() {
         return this.possibleText[Math.floor(Math.random() * this.possibleText.length)];
-    }
-}
-
-class Projects extends React.Component {
-    renderProjListing(projTitle, projDesc, projImagePath) {
-        return (
-            <ProjectListing projTitle={projTitle} projDesc={projDesc} projImagePath={projImagePath}></ProjectListing>
-        );
-    }
-
-    render() {
-        const projectsStyling = {
-            padding: "10px",
-        }
-        return (
-            <div id="projects" style={projectsStyling}>
-                {this.renderProjListing("FTC Robotics Competition", 
-                    "Code base of team ACE robotics for 2020 FTC competition.", 
-                    "ftc.jpg")}
-
-                    {this.renderProjListing("Texthole", 
-                    "A typing game that tests typing speed an accuracy.", 
-                    "texthole.png")}
-
-                    {this.renderProjListing("Community Plant", 
-                    "A twitter bot that grows a digital plant depending on the amount of likes, follows, and retweets it receives. No longer operating.", 
-                    "plant.jpg")}
-            </div>
-        );
     }
 }
 
@@ -185,6 +157,11 @@ class Canvas extends React.Component {
 }
 
 class HeaderInfo extends React.Component {
+    constructor(props) {
+        super(props);
+        props.nameTitle = "</>";
+    }
+
     render() {
         const infoStyling = {
             "font-family": "Consolas",
@@ -225,11 +202,32 @@ class HeaderInfo extends React.Component {
                 <img src="head.png" style={imageStyling} />
 
                 <h1>
-                    <span style={nameStyling}>keon davoudi</span>
+                    <span style={nameStyling} ref="nameTitle">{this.props.nameTitle}</span>
                 </h1>
                 <span style={subtextStyling}><strong>Computer science</strong> student at <strong>ASU</strong></span>
             </div>
         );
+    }
+
+    componentDidMount() {
+        
+        var name = "keon davoudi";
+        this.props.nameTitle = "</>";
+
+        var i = 0;
+        var nameInterval = setInterval(() => {
+            if (i <= name.length) {
+                this.props.nameTitle = "<"+name.slice(0, i)+"/>";
+                console.log(this.props.nameTitle);
+                i++;
+                this.setState({});
+            }
+            
+        
+            
+        }, 100);
+        
+    
     }
 }
 
@@ -262,6 +260,45 @@ class Navbar extends React.Component {
                     <li style={listItemStyle}><a>Projects</a></li>
                     <li style={listItemStyle}><a>Contact</a></li>
                 </ul>
+            </div>
+        );
+    }
+}
+
+class ProjectLinks extends React.Component {
+    render() {
+        return (
+            <div id="links">
+
+            </div>
+        );
+    }
+}
+
+class Projects extends React.Component {
+    renderProjListing(projTitle, projDesc, projImagePath) {
+        return (
+            <ProjectListing projTitle={projTitle} projDesc={projDesc} projImagePath={projImagePath}></ProjectListing>
+        );
+    }
+
+    render() {
+        const projectsStyling = {
+            padding: "10px",
+        }
+        return (
+            <div id="projects" style={projectsStyling}>
+                {this.renderProjListing("FTC Robotics Competition", 
+                    "Code base of team ACE robotics for 2020 FTC competition.", 
+                    "ftc.jpg")}
+
+                    {this.renderProjListing("Texthole", 
+                    "A typing game that tests typing speed an accuracy.", 
+                    "texthole.png")}
+
+                    {this.renderProjListing("Community Plant", 
+                    "A twitter bot that grows a digital plant depending on the amount of likes, follows, and retweets it receives. No longer operating.", 
+                    "plant.jpg")}
             </div>
         );
     }
