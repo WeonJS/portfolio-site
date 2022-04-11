@@ -160,17 +160,18 @@ class HeaderInfo extends React.Component {
     constructor(props) {
         super(props);
         props.nameTitle = "</>";
+        props.desc = "</>";
     }
 
     render() {
         const infoStyling = {
-            "font-family": "Courier New",
+            "font-family": "Consolas",
             "text-align": "center",
             position: "absolute",
             top: "25%",
             left: "50%",
             transform: "translate(-50%,-50%)",
-            zIndex: "1"
+            zIndex: "1",
         }
 
         const nameStyling = {
@@ -179,7 +180,8 @@ class HeaderInfo extends React.Component {
             padding: "3px",
             position: "absolute",
             top: "52%",
-            left: "42%"
+            left: "42%",
+            
         };
 
         const subtextStyling = {
@@ -204,29 +206,37 @@ class HeaderInfo extends React.Component {
                 <h1>
                     <span style={nameStyling} ref="nameTitle">{this.props.nameTitle}</span>
                 </h1>
-                <span style={subtextStyling}><strong>Computer science</strong> student at <strong>ASU</strong></span>
+                <span style={subtextStyling}>{this.props.desc}</span>
             </div>
         );
     }
 
     componentDidMount() {
-        
+        var desc = "Computer science student at ASU";
         var name = "keon davoudi";
         this.props.nameTitle = "</>";
+        this.props.desc = "";
 
         var i = 0;
         var nameInterval = setInterval(() => {
             if (i <= name.length) {
                 this.props.nameTitle = "<"+name.slice(0, i)+"/>";
-                console.log(this.props.nameTitle);
+                // console.log(this.props.nameTitle);
                 i++;
                 this.setState({});
             }
-            
-        
-            
         }, 100);
         
+        var j = 0;
+        var descInterval = setInterval(() => {
+            if (j < desc.length+1) {
+                this.props.desc = desc.slice(0, j);
+                console.log(this.props.desc);
+                j++;
+                this.setState({});
+                
+            }
+        }, 50);
     
     }
 }
@@ -308,7 +318,6 @@ class ProjectListing extends React.Component {
 
     render() {
         const projListingStyle = {
-            color: "white",
             margin: "5px",
             height: "10vw",
             backgroundColor: "white",
