@@ -112,13 +112,21 @@ class Projects extends React.Component {
 
     render() {
         const projectsStyling = {
-            padding: "10px"
+            padding: "10px",
         }
         return (
             <div id="projects" style={projectsStyling}>
                 {this.renderProjListing("FTC Robotics Competition", 
                     "Code base of team ACE robotics for 2020 FTC competition.", 
                     "ftc.jpg")}
+
+                    {this.renderProjListing("Texthole", 
+                    "A typing game that tests typing speed an accuracy.", 
+                    "texthole.png")}
+
+                    {this.renderProjListing("Community Plant", 
+                    "A twitter bot that grows a digital plant depending on the amount of likes, follows, and retweets it receives. No longer operating.", 
+                    "plant.jpg")}
             </div>
         );
     }
@@ -179,7 +187,7 @@ class Canvas extends React.Component {
 class HeaderInfo extends React.Component {
     render() {
         const infoStyling = {
-            "font-family": "Courier New",
+            "font-family": "Consolas",
             "text-align": "center",
             position: "absolute",
             top: "25%",
@@ -190,15 +198,21 @@ class HeaderInfo extends React.Component {
 
         const nameStyling = {
             backgroundColor: "#9FE2BF",
-            borderRadius: "0px",
+            borderTopLeftRadius: "7px",
             padding: "3px",
             position: "absolute",
-            top: "49%",
-            left: "40%"
+            top: "52%",
+            left: "42%"
         };
 
         const subtextStyling = {
-            color: "#000000"
+            color: "#000000",
+            backgroundColor: "#9FE2BF",
+            position: "absolute",
+            top: "58%",
+            left: "42%",
+            padding: "4px",
+            borderBottomLeftRadius: "7px"
         }
 
         const imageStyling = {
@@ -209,10 +223,11 @@ class HeaderInfo extends React.Component {
         return (
             <div id="info" style={infoStyling}>
                 <img src="head.png" style={imageStyling} />
+
                 <h1>
-                    <span style={nameStyling}>KEON DAVOUDI</span>
+                    <span style={nameStyling}>keon davoudi</span>
                 </h1>
-                <p style={subtextStyling}><strong>Computer science</strong> student at <strong>ASU</strong></p>
+                <span style={subtextStyling}><strong>Computer science</strong> student at <strong>ASU</strong></span>
             </div>
         );
     }
@@ -224,7 +239,7 @@ class Navbar extends React.Component {
             textAlign: "center",
             fontFamily: "Consolas",
             backgroundColor: "black",
-            margin: "0px",
+            marginTop: "2vw"
         };
 
         const listItemStyle = {
@@ -256,23 +271,23 @@ class ProjectListing extends React.Component {
 
     render() {
         const projListingStyle = {
-            "font-size": "12vw",
-            fontFamily: "Courier New",
             color: "white",
             margin: "5px",
             height: "10vw",
             backgroundColor: "white",
             padding: "25px",
             borderStyle: "solid",
-            borderColor: "black"
+            borderColor: "black",
+            width: "42vw",
+            float: "left",
+            
         };
 
         const thumbnailStyle = {
             height: "100%",
-            width: "10%",
+            width: "22%",
             top: "50%",
             float: "left",
-            marginRight: "20px",
             borderStyle: "solid",
             borderColor: "black"
         };
@@ -282,12 +297,17 @@ class ProjectListing extends React.Component {
         };
 
         const projDescStyle = {
-            
+            borderLeftStyle: "solid",
+            borderLeftColor: "#9FE2BF",
+            paddingLeft: "1vw"
         };
 
         const projTextStyle = {
-            fontSize: "22px",
-            color: "black"
+            fontSize: "1vw",
+            color: "black",
+            width: "50%",
+            fontFamily: "Consolas",
+            marginLeft: "10vw"
         };
 
         return (
@@ -295,7 +315,9 @@ class ProjectListing extends React.Component {
                 <img src={this.props.projImagePath} style={thumbnailStyle}/>
                 <div id="projText" style={projTextStyle}>
                     <h1 style={projTitleStyle}>{this.props.projTitle}</h1>
-                    <p style={projDescStyle}>{this.props.projDesc}</p>
+                    <div style={projDescStyle}>
+                        {this.props.projDesc}
+                    </div>
                 </div>
             </div>
         );
