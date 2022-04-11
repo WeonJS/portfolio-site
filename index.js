@@ -345,6 +345,7 @@ class ProjectListing extends React.Component {
         const projDescStyle = {
             borderLeftStyle: "solid",
             borderLeftColor: "#9FE2BF",
+            borderLeftWidth: "10px",
             paddingLeft: "1vw"
         };
 
