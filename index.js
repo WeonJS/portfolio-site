@@ -231,7 +231,6 @@ class HeaderInfo extends React.Component {
         var descInterval = setInterval(() => {
             if (j < desc.length+1) {
                 this.props.desc = desc.slice(0, j);
-                console.log(this.props.desc);
                 j++;
                 this.setState({});
                 
@@ -276,21 +275,47 @@ class Navbar extends React.Component {
 }
 
 class ProjectLinks extends React.Component {
-    render() {
-        return (
-            <div id="links">
+    renderProjectLinks() {
+        var icons = [];
+        for (var i = 0; i < this.props.linksArray.length; i++) {
+            icons.push(<a href={this.props.linksArray[i]}>{this.createImgFromLink(this.props.linksArray[i])}</a>);
+        }
 
+        return (
+            icons
+        );
+    }
+
+    createImgFromLink(link) {
+        
+        var imgLink = "https://s2.googleusercontent.com/s2/favicons?domain="+link;
+        const imgStyle = {
+            margin: "3px",
+            width: "16px",
+            height: "16px"
+        }
+        return (
+            <img src={imgLink} style={imgStyle} title={link}/>
+        );
+    }
+    
+    render() {
+        const linksStyling = {
+            borderStyle: "solid",
+            float: "right",
+            bottom: "0",
+            padding: "1px",
+        }
+
+        return (
+            <div id="links" style={linksStyling}>
+                {this.renderProjectLinks()}
             </div>
         );
     }
 }
 
 class Projects extends React.Component {
-    renderProjListing(projTitle, projDesc, projImagePath) {
-        return (
-            <ProjectListing projTitle={projTitle} projDesc={projDesc} projImagePath={projImagePath}></ProjectListing>
-        );
-    }
 
     render() {
         const projectsStyling = {
@@ -298,17 +323,31 @@ class Projects extends React.Component {
         }
         return (
             <div id="projects" style={projectsStyling}>
-                {this.renderProjListing("FTC Robotics Competition", 
-                    "Code base of team ACE robotics for 2020 FTC competition.", 
-                    "ftc.jpg")}
+                <ProjectListing projTitle="FTC Robotics Competition" 
+                projDesc="Code base of team ACE robotics for 2020 FTC competition." 
+                projImagePath="ftc.jpg" linksArray={[
+                    "https://github.com/WeonJS/Complete-Ace-Robotics-Team-Source",
+                    ]}>
+                    
+                </ProjectListing>
 
-                    {this.renderProjListing("Texthole", 
-                    "A typing game that tests typing speed an accuracy.", 
-                    "texthole.png")}
+                <ProjectListing projTitle="Texthole" 
+                projDesc="A typing game that tests typing speed and accuracy." 
+                projImagePath="texthole.png" linksArray={[
+                    "https://github.com/WeonJS/texthole"
+                    ]}>
+                </ProjectListing>
 
-                    {this.renderProjListing("Community Plant", 
-                    "A twitter bot that grows a digital plant depending on the amount of likes, follows, and retweets it receives. No longer operating.", 
-                    "plant.jpg")}
+                <ProjectListing projTitle="Community Plant" 
+                projDesc="A twitter bot that grows a digital plant depending on the amount of likes, follows, and retweets it receives. No longer operating." 
+                projImagePath="plant.jpg" linksArray={[
+                    "https://github.com/WeonJS/Twitter-Community-Plant",
+                    "https://twitter.com/CommunityPlant"
+                    ]}>
+                    
+                </ProjectListing>
+
+                
             </div>
         );
     }
@@ -332,8 +371,6 @@ class ProjectListing extends React.Component {
         const thumbnailStyle = {
             height: "100%",
             width: "22%",
-            top: "50%",
-            float: "left",
             borderStyle: "solid",
             borderColor: "black"
         };
@@ -354,7 +391,7 @@ class ProjectListing extends React.Component {
             color: "black",
             width: "50%",
             fontFamily: "Consolas",
-            marginLeft: "10vw"
+            display: "inline-block",
         };
 
         return (
@@ -366,6 +403,7 @@ class ProjectListing extends React.Component {
                         {this.props.projDesc}
                     </div>
                 </div>
+                <ProjectLinks linksArray={this.props.linksArray}></ProjectLinks>
             </div>
         );
     }
