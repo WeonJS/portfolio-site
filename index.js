@@ -277,8 +277,15 @@ class Navbar extends React.Component {
 class ProjectLinks extends React.Component {
     renderProjectLinks() {
         var icons = [];
+
+        const linkStyling = {
+            width: "100%",
+            height: "100%",
+        };
+
         for (var i = 0; i < this.props.linksArray.length; i++) {
-            icons.push(<a href={this.props.linksArray[i]}>{this.createImgFromLink(this.props.linksArray[i])}</a>);
+            icons.push(this.createImgFromLink(this.props.linksArray[i]));
+            //<a style={linkStyling} href={this.props.linksArray[i]}>{this.createImgFromLink(this.props.linksArray[i])}</a>
         }
 
         return (
@@ -286,16 +293,24 @@ class ProjectLinks extends React.Component {
         );
     }
 
+    openLink() {
+
+    }
+
     createImgFromLink(link) {
         
         var imgLink = "https://s2.googleusercontent.com/s2/favicons?domain="+link;
+        
         const imgStyle = {
-            margin: "3px",
             width: "16px",
-            height: "16px"
+            height: "16px",
         }
+        
         return (
-            <img src={imgLink} style={imgStyle} title={link}/>
+            <a href={link} style={imgStyle}>
+                <img src={imgLink} style={imgStyle} title={link}/>
+            </a>
+            
         );
     }
     
@@ -303,8 +318,6 @@ class ProjectLinks extends React.Component {
         const linksStyling = {
             borderStyle: "solid",
             float: "right",
-            bottom: "0",
-            padding: "1px",
         }
 
         return (
@@ -360,7 +373,7 @@ class ProjectListing extends React.Component {
             margin: "5px",
             height: "10vw",
             backgroundColor: "white",
-            padding: "25px",
+            padding: "10px",
             borderStyle: "solid",
             borderColor: "black",
             width: "42vw",
@@ -369,10 +382,12 @@ class ProjectListing extends React.Component {
         };
 
         const thumbnailStyle = {
-            height: "100%",
-            width: "22%",
+            height: "98%",
+            width: "100%",
             borderStyle: "solid",
-            borderColor: "black"
+            borderColor: "black",
+            width: "23%",
+            float: "left"
         };
 
         const projTitleStyle = {
@@ -382,7 +397,7 @@ class ProjectListing extends React.Component {
         const projDescStyle = {
             borderLeftStyle: "solid",
             borderLeftColor: "#9FE2BF",
-            borderLeftWidth: "10px",
+            borderLeftWidth: "5px",
             paddingLeft: "1vw"
         };
 
@@ -392,11 +407,17 @@ class ProjectListing extends React.Component {
             width: "50%",
             fontFamily: "Consolas",
             display: "inline-block",
+            marginLeft: "10px"
+        };
+
+        const imageSpaceStyle = {
+            
         };
 
         return (
             <div class="project" style={projListingStyle}>
                 <img src={this.props.projImagePath} style={thumbnailStyle}/>
+                
                 <div id="projText" style={projTextStyle}>
                     <h1 style={projTitleStyle}>{this.props.projTitle}</h1>
                     <div style={projDescStyle}>
