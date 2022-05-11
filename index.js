@@ -1,3 +1,4 @@
+
 class Website extends React.Component {
     
     
@@ -29,7 +30,9 @@ class Website extends React.Component {
                 
                 <div id="content" style={contentStyle}>
                     <Navbar></Navbar>
-                    <Projects></Projects>
+                    <div ref="innerContent">
+                        <Projects></Projects>
+                    </div>
                 </div>
             </div>
         );
@@ -251,7 +254,7 @@ class Navbar extends React.Component {
 
         const listItemStyle = {
             display: "inline-block",
-            borderRadius: "0px",
+            borderRadius: "5px",
             backgroundColor: "#9FE2BF",
             padding: "5px",
             margin: "8px",
