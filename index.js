@@ -139,7 +139,7 @@ class VisualSection extends React.Component {
 
             
 
-            ctx.fillStyle = "#abffab";
+            ctx.fillStyle = "#abffab"; 
             ctx.beginPath();
             for (var i = 0; i < points.length; i++) {
                 points[i].update();
