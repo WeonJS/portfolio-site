@@ -8,8 +8,9 @@ class Website extends React.Component {
 
         return (
             <div id="website" style={websiteStyling}>
-                <InfoSection></InfoSection>
                 <VisualSection></VisualSection>
+                <InfoSection></InfoSection>
+                
             </div>
         );
     }
@@ -62,7 +63,7 @@ class InfoSection extends React.Component {
         return (
             <div id="info" style={infoStyling}>
                 <h1 style={headerStyle}>I'm Keon.</h1>
-                <p style={subtextStyle}>I am a sohpomore <strong>computer science</strong> student at Arizona State Univeristy. 
+                <p style={subtextStyle}>I am a sohpomore <strong>computer science</strong> student at ASU Barrett. 
                     I've been interested in programming for a while. I am excited to elevate my passion into a professional career.
                 </p>
                 <button style={learnMoreStyle}>Learn More</button>
@@ -97,25 +98,16 @@ class VisualSection extends React.Component {
     
     render() {
 
-        var imgStyle = {
-            width: "25%",
-            position: "absolute",
-            left: "55%",
-            top: "27%"
-        }
 
         var canvasStyle = {
             position: "absolute",
-            left: "45%",
-            top: "07%"
+            left: "0%",
+            top: "10%"
         }
 
         return (
             <div id="visuals">
-                <canvas ref="canvas" style={canvasStyle} width="640px" height="640px">
-                    
-                </canvas>
-                <img src="code.png" style={imgStyle}></img>
+                <canvas ref="canvas" style={canvasStyle} width="640px" height="640px"></canvas>
             </div>
         );
     }
@@ -159,9 +151,6 @@ class VisualSection extends React.Component {
 
 
             ctx.fillStyle = "#363b36";
-            ctx.beginPath();
-            ctx.ellipse(canvas.width/2, canvas.height*0.66, canvas.width*0.4, canvas.height*0.05, 0, 0, 2*Math.PI);
-            ctx.closePath();
             ctx.fill();
             
             
