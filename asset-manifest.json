@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.0634ac72.css",
-    "main.js": "/static/js/main.6905fd89.js",
+    "main.css": "/static/css/main.918c39a4.css",
+    "main.js": "/static/js/main.62bb1a29.js",
+    "static/media/ftc.PNG": "/static/media/ftc.ded2ed48233b513d0b7b.PNG",
+    "static/media/code.jpg": "/static/media/code.109790ee0c4f3b168dbf.jpg",
+    "static/media/cluttered2.PNG": "/static/media/cluttered2.b85faa9afab229970c8d.PNG",
+    "static/media/cluttered.PNG": "/static/media/cluttered.55fe8586e1d3ce42de26.PNG",
+    "static/media/gol.png": "/static/media/gol.f627c5a1d1f19be68d2e.png",
     "index.html": "/index.html",
-    "main.0634ac72.css.map": "/static/css/main.0634ac72.css.map",
-    "main.6905fd89.js.map": "/static/js/main.6905fd89.js.map"
+    "main.918c39a4.css.map": "/static/css/main.918c39a4.css.map",
+    "main.62bb1a29.js.map": "/static/js/main.62bb1a29.js.map"
   },
   "entrypoints": [
-    "static/css/main.0634ac72.css",
-    "static/js/main.6905fd89.js"
+    "static/css/main.918c39a4.css",
+    "static/js/main.62bb1a29.js"
   ]
 }
